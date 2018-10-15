@@ -1,0 +1,125 @@
+aliyun:
+  push:
+    iosAppKey: 24948280
+    androidAppKey: 24948739
+    apnsEnv: PRODUCT
+
+spring:
+  mail:
+    host: smtp.exmail.qq.com
+    username: code@mcilife.com
+    password: HZmckj2018
+    port: 465
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+  rabbitmq:
+    host: 172.16.121.169
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        prefetch: 64
+  redis:
+    host: 172.16.121.169
+    port: 6379
+    password: mcilifemcilifemcilife
+    jedis:
+      pool:
+        max-active: 100
+        max-wait: 30
+        max-idle: 20
+        min-idle: 10
+    timeout: 6000
+  datasource:
+    druid:
+      #直接写在one,two下面不能被解析，druid（1.1.8版本）解析报错，不知道为什么，这个属性必须放在这里，然后通过@value解析后用set的方式设置到DataSource里面去
+      connection-init-sqls: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+      one:
+        max-active: 64
+        min-idle: 8
+        initial-size: 1
+        validation-query: SELECT 1
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 3600000
+        min-evictable-idle-time-millis: 300000
+        max-wait: 60000
+        pool-prepared-statements: true
+        max-open-prepared-statements: 30
+        filters: 'stat,wall,log4j'
+        connect-properties: 'druid.stat.mergeSql: true;druid.stat.slowSqlMillis: 5000'
+        driver-class-name: 'com.mysql.cj.jdbc.Driver'
+        type: 'com.alibaba.druid.pool.DruidDataSource'
+        name: product
+        url: jdbc:mysql://rm-bp1p89g09cdhv2g89.mysql.rds.aliyuncs.com:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        username: hzmckj
+        password: HZmckj2018
+      two:
+        max-active: 10
+        min-idle: 1
+        initial-size: 1
+        validation-query: SELECT 1
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 3600000
+        min-evictable-idle-time-millis: 300000
+        max-wait: 60000
+        pool-prepared-statements: true
+        max-open-prepared-statements: 30
+        filters: 'stat,wall,log4j'
+        connect-properties: 'druid.stat.mergeSql: true;druid.stat.slowSqlMillis: 5000'
+        driver-class-name: 'com.mysql.cj.jdbc.Driver'
+        type: 'com.alibaba.druid.pool.DruidDataSource'
+        name: dev
+        url: jdbc:mysql://47.97.126.53:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: meici
+
+      web-stat-filter:
+        enabled: true
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+        session-stat-enable: true
+        principal-session-name: mcilife
+        profile-enable: true
+      stat-view-servlet:
+        enabled: true
+        url-pattern: '/druid/*'
+        reset-enable: true
+        login-username: mcilife
+        login-password: mcilife
+
+environment: product
+
+rongyun:
+  appKey: z3v5yqkbz1gi0
+  appSecret: vEamoAn75rJ
+  
+feign:
+  inside: http://172.16.2.133:6020
+
+
+web:
+  url: https://mcwebresource.mcilife.com/product/
+  host: gateway.mcilife.com
+
+ons:
+  accessKey: KkXBxdssgQFCgUoe
+  accessKeySecret: TKY9Vb4vPLIVqrs4LOUMGjXQ5r70an
+  onsAddr: http://onsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
+  model:
+    pmd:
+      pid: PID_pmd_test
+      cid: CID_pmd_test
+      topic: Topic_pmd_test
+oss:
+  endpoint: http://oss-cn-hangzhou-internal.aliyuncs.com
+            
+wechat:
+  appid: wxea8ee9dfff485905
+  secret: 5282ed8f8cfd5ed72acddbeb07b4ec54
