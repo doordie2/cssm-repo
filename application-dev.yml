@@ -15,7 +15,7 @@ spring:
       mail.smtp.starttls.required: true
       mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
   rabbitmq:
-    host: 172.16.2.131
+    host: 127.0.0.1
     port: 5672
     username: guest
     password: guest
@@ -23,9 +23,9 @@ spring:
       simple:
         prefetch: 16
   redis:
-    host: 172.16.2.131
+    host: 127.0.0.1
     port: 6379
-    password: HZmckj2018
+    password: 123456
     jedis:
       pool:
         max-active: 100
