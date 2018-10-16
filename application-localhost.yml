@@ -52,7 +52,7 @@ spring:
         driver-class-name: 'com.mysql.cj.jdbc.Driver'
         type: 'com.alibaba.druid.pool.DruidDataSource'
         name: dev
-        url: jdbc:mysql://localhost:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://localhost:3306/lcy?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
         username: root
         password: 123456
       two:
@@ -73,7 +73,7 @@ spring:
         driver-class-name: 'com.mysql.cj.jdbc.Driver'
         type: 'com.alibaba.druid.pool.DruidDataSource'
         name: product
-        url: jdbc:mysql://localhost:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://localhost:3306/lcy?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
         username: root
         password: 123456
 
