@@ -55,9 +55,9 @@ spring:
         driver-class-name: 'com.mysql.cj.jdbc.Driver'
         type: 'com.alibaba.druid.pool.DruidDataSource'
         name: dev
-        url: jdbc:mysql://47.96.106.75:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://localhost:3306/lcy?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
         username: root
-        password: HZmckj2018
+        password: 123456
       two:
         max-active: 10
         min-idle: 1
@@ -76,9 +76,9 @@ spring:
         driver-class-name: 'com.mysql.cj.jdbc.Driver'
         type: 'com.alibaba.druid.pool.DruidDataSource'
         name: product
-        url: jdbc:mysql://rm-bp1p89g09cdhv2g898o.mysql.rds.aliyuncs.com:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
-        username: hzmckj
-        password: HZmckj2018
+        url: jdbc:mysql://localhost:3306/lcy?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: 123456
 
 
       web-stat-filter:
