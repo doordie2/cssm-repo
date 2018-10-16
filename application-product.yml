@@ -16,7 +16,7 @@ spring:
       mail.smtp.starttls.required: true
       mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
   rabbitmq:
-    host: 172.16.121.169
+    host: 127.0.0.1
     port: 5672
     username: guest
     password: guest
@@ -24,9 +24,9 @@ spring:
       simple:
         prefetch: 64
   redis:
-    host: 172.16.121.169
+    host: 127.0.0.1
     port: 6379
-    password: mcilifemcilifemcilife
+    password: 123456
     jedis:
       pool:
         max-active: 100
@@ -56,9 +56,9 @@ spring:
         driver-class-name: 'com.mysql.cj.jdbc.Driver'
         type: 'com.alibaba.druid.pool.DruidDataSource'
         name: product
-        url: jdbc:mysql://rm-bp1p89g09cdhv2g89.mysql.rds.aliyuncs.com:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
-        username: hzmckj
-        password: HZmckj2018
+        url: jdbc:mysql://localhost:3306/lcy?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        username: root
+        password: 123456
       two:
         max-active: 10
         min-idle: 1
@@ -77,9 +77,9 @@ spring:
         driver-class-name: 'com.mysql.cj.jdbc.Driver'
         type: 'com.alibaba.druid.pool.DruidDataSource'
         name: dev
-        url: jdbc:mysql://47.97.126.53:3306/meici?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+        url: jdbc:mysql://localhost:3306/lcy?characterEncoding=UTF-8&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
         username: root
-        password: meici
+        password: 123456
 
       web-stat-filter:
         enabled: true
