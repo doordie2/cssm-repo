@@ -1,19 +1,4 @@
-aliyun:
-  push:
-    iosAppKey: 24948280
-    androidAppKey: 24952789
-    apnsEnv: PRODUCT
 spring:
-  mail:
-    host: smtp.exmail.qq.com
-    username: code@mcilife.com
-    password: HZmckj2018
-    port: 465
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.starttls.enable: true
-      mail.smtp.starttls.required: true
-      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -103,11 +88,6 @@ rongyun:
   appKey: lmxuhwagli35d
   appSecret: mdwsfGtKMc
 
-web:
-  url: https://mcwebresource.mcilife.com/dev/
-  host: devgateway.mcilife.com
-  articlePreviewUrl: https://mcwebresource.mcilife.com/dev/articleDetail.html
-
 ons:
   accessKey: KkXBxdssgQFCgUoe
   accessKeySecret: TKY9Vb4vPLIVqrs4LOUMGjXQ5r70an
@@ -116,10 +96,4 @@ ons:
     pmd:
       pid: PID_pmd_test
       cid: CID_pmd_test
-      topic: Topic_pmd_test
-oss:
-  endpoint: http://oss-cn-hangzhou-internal.aliyuncs.com
-            
-wechat:
-  appid: wx24b8600342b29b0e
-  secret: a9aa9d00f97743a07c625bc3acc15e63
+      topic: Topic_pmd_test            
