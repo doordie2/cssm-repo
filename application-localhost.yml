@@ -20,7 +20,7 @@ spring:
     username: guest
     password: guest
   redis:
-    host: 127.0.0.1
+    host: 10.10.189.56
     port: 6379
     password: 123456
     jedis:
